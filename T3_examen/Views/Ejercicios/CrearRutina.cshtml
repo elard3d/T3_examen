@@ -6,32 +6,29 @@
 
 
 <div class="text-center">
-    <h1>EJERCICIOS</h1>
+    <h1>Crear Rutina</h1>
     <br />
     <div class="container">
 
-        <div class="flex-sm-row-reverse">
+        <div class="flex-sm-row-reverse" style="border-style:solid; padding: 2%">
 
-            <a class="btn btn-success" asp-area="" asp-controller="Auth" asp-action="Register">Principiante</a>
 
-        </div>
+            <form action="/Rutina/CrearRutina" method="post">
+                <label>Nombre de la rutina</label>
+                <input type="text" name="nombre" />
+                <br />
+                <label>Tipo</label>
+                <select name="tipo">
+                    <option value="Principiante">Principiante</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                </select>
+                <br /><br />
+                <button type="submit">Crear</button>
+            </form>
 
-        <br />
-
-        <div class="flex-sm-row-reverse">
-
-            <a class="btn btn-warning" asp-area="" asp-controller="Auth" asp-action="Register">Intermedio</a>
-
-        </div>
-
-        <br />
-
-        <div class="flex-sm-row-reverse">
-
-            <a class="btn btn-danger" asp-area="" asp-controller="Auth" asp-action="Register">Avanzada</a>
 
         </div>
-
 
     </div>
 

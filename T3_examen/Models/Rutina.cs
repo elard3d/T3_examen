@@ -7,7 +7,7 @@ namespace T3_examen.Models
 {
     public class Rutina
     {
-        public int idRutina{ get; set; }
+        public int id{ get; set; }
         public string nombreRutina { get; set; }
         public string tipoRutina { get; set; }
         public int idUsuario { get; set; }

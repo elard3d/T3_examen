@@ -13,7 +13,7 @@ namespace T3_examen.Models.Maps
         {
             builder.ToTable("Rutina");
 
-            builder.HasKey(o => o.idRutina);
+            builder.HasKey(o => o.id);
 
             builder.HasOne(o => o.usuario).WithMany().HasForeignKey(o => o.idUsuario);
         }

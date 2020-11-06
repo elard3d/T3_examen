@@ -16,10 +16,16 @@ namespace T3_examen.Models
 
         public virtual DbSet<Usuarios> usuarios{ get; set; }
 
+        public DbSet<Rutina> Rutina { get; set; }
+        public DbSet<EjercicioRutina> EjercicioRutina { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new EjerciciosMap()); 
+            modelBuilder.ApplyConfiguration(new UsuariosMap()); 
+            modelBuilder.ApplyConfiguration(new RutinaMap()); 
+            modelBuilder.ApplyConfiguration(new EjercicioRutinaMap()); 
         }
 
     }
