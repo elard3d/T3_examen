@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center">
+    <h1>EJERCICIOS</h1>
+
+</div>
+
+<div class="container">
+
+    <div class="navbar flex-sm-row-reverse">
+        <ul class="flex-grow-1">
+            <li class="nav-item">
+                <a class="btn btn-info" asp-area="" asp-controller="Ejercicios" asp-action="CrearRutina">Crear Rutina</a>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Lista de Ejercicios</h2>
+
+    <br />
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Nombre</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                var ejercicios = ((List<Ejercicios>)ViewBag.Ejercicios);
+            }
+
+            @for (var i = 0; i < ejercicios.Count; i++)
+            {
+                var item = ejercicios[i];
+
+                <tr>
+                    <td>@item.id</td>
+                    <td><b>@item.nombre</b></td>
+                    <td>
+                        <iframe width="360" height="315"
+                                src="@item.link"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+                            gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                    </td>
+                </tr>
+
+            }
+            </tbody>
+    </table>
+</div>
