@@ -11,7 +11,8 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>Nombre del ejercicio</th>
+            <th>Nº</th>
+            <th>Nombre: </th>
 
             <th>Tiempo</th>
 
@@ -22,8 +23,9 @@
         @foreach (var item in ViewBag.Ejercicios)
         {
             <tr>
+                <td>@item.ejercicios.id</td>
                 <td>@item.ejercicios.nombre</td>
-                <td>@item.tiempoRutina segundos</td>
+                <td>@item.tiempoRutina</td>
                 <td>
                     
                     <iframe width="360" height="315"

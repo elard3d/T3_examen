@@ -9,6 +9,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
+
+                <th>Nº</th>
                 <th>Nombre</th>
                 <th>Tipo</th>
                 <th></th>
@@ -20,6 +22,7 @@
             @foreach (var item in ViewBag.Rutinas)
             {
                 <tr>
+                    <td>@item.id</td>
                     <td>@item.nombreRutina</td>
                     <td>@item.tipoRutina</td>
                     <td>
